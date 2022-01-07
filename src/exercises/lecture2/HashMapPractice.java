@@ -22,7 +22,7 @@ public class HashMapPractice {
             if (!newStudent.equals("")) {
                 System.out.print("ID: ");
                 Integer newId = input.nextInt();
-                classRoster.put(newId, newStudent);
+                classRoster.put(newStudent, newId);
 
                 // Read in the newline before looping back
                 input.nextLine();
@@ -39,7 +39,5 @@ public class HashMapPractice {
             sum += student.getValue();
         }
 
-        double avg = sum / students.size();
-        System.out.println("Average grade: " + avg);
     }
 }

@@ -17,14 +17,13 @@ public class ArrayListPractice {
         String phrase = "I would not, could not.";
         ArrayList<String> wordList = new ArrayList<>(Arrays.asList(phrase.split(" ")));
         System.out.println("Enter a search word:");
-        Scanner input = new Scanner();
+        Scanner input = new Scanner(System.in);
         int numChars = input.nextInt();
 
     }
 
     public static void printFiveLetterWord(ArrayList<String> array, int length) {
         for (String word : array) {
-            if ()
             System.out.println(word);
         }
     }
