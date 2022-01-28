@@ -57,7 +57,9 @@ public class Student {
     //  than just the class fields.
     @Override
     public String toString() {
-        return "*****\nName: " + this.name + "\nClassification: " + this.getGradeLevel() + "\nGPA: " + this.gpa;
+        //return "*****\nName: " + this.name + "\nClassification: " + this.getGradeLevel() + "\nGPA: " + this.gpa;
+        String studentReport = String.format("%s is a %s with %d credits and a GPA of %.2f", this.name, this.getGradeLevel(), this.getNumberOfCredits(), this.getGpa());
+        return studentReport;
     }
 
     // TODO: Add your custom 'equals' method here. Consider which fields should match in order to call two
@@ -65,6 +67,7 @@ public class Student {
     @Override
     public boolean equals(Object obj) {
         if (obj instanceof Student == false) return false;
+        if (obj == null) return false;
         Student myStudentObj = (Student) obj;
         if (myStudentObj.name.equals(this.name)) return true;
         else return false;
